@@ -11,7 +11,7 @@ function Store() {
  const {Stores} = useContext(BrandContext);
  function updateStore(id) {
     
-    axios.put('http://localhost:5000/store/updateStore',{
+    axios.put('https://swift-sense-admin.herokuapp.com/store/updateStore',{
         id:id,  
         newLocation:newLocation,
 
@@ -22,7 +22,7 @@ function Store() {
 
 //delete store
   function deleteStore(id) {
-    axios.delete(`http://localhost:5000/store/deleteStore/${id}`,{
+    axios.delete(`https://swift-sense-admin.herokuapp.com/store/deleteStore/${id}`,{
     }).then(()=>{
       console.log('deleted ');
     })

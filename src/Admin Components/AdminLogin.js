@@ -19,14 +19,11 @@ function AdminLogin() {
         email,
         password,
       };
-
-      await axios.post("http://localhost:5000/brand/login", loginData, {
+      
+      await axios.post("https://swift-sense-admin.herokuapp.com/brand/login", loginData, {
         withCredentials:true
       });
-      //await axios.post(
-      //  "https://mern-auth-template-tutorial.herokuapp.com/auth/login",
-      //  loginData
-      //);
+
       await getLoggedIn();
       history.push("/");
     } catch (err) {

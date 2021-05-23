@@ -8,8 +8,8 @@ function BrandContextProvider(props) {
 const [Brand, setBrand] = useState([]);
 const [Stores, setStores ] = useState([])
 async function getBrands() {
-    const Brand = await axios.get('http://localhost:5000/brand/name'); 
-    const Store = await axios.get("http://localhost:5000/store/show");
+    const Brand = await axios.get('https://swift-sense-admin.herokuapp.com/brand/name'); 
+    const Store = await axios.get("https://swift-sense-admin.herokuapp.com/store/show");
 
     
     //const loggedInRes = await axios.get(

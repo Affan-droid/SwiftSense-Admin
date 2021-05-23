@@ -18,13 +18,13 @@ const  AddStore = () => {
         bid,
       };
 
-      await axios.post("http://localhost:5000/store/", registerData,{
+      // await axios.post("http://localhost:5000/store/", registerData,{
+      //   withCredentials:true
+      // });
+      await axios.post("https://swift-sense-admin.herokuapp.com/store/", registerData,{
         withCredentials:true
       });
-      //await axios.post(
-      // "https://mern-auth-template-tutorial.herokuapp.com/auth/",
-      //  registerData
-      //);
+
     } catch (err) {
       console.error(err);
     }
